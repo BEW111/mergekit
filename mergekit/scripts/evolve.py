@@ -66,6 +66,12 @@ from mergekit.options import MergeOptions
 @click.option("--merge-cuda/--no-merge-cuda", is_flag=True, default=True)
 @click.option("--trust-remote-code/--no-trust-remote-code", is_flag=True, default=False)
 @click.option("--allow-crimes/--no-allow-crimes", is_flag=True, default=False)
+@click.option(
+    "--infer-architecture",
+    is_flag=True,
+    default=False,
+    help="Infer architecture for all models, rather than using preset architectures",
+)
 @click.option("--random-seed", type=int, default=0)
 @click.option("--batch-size", type=int, default=None, help="Batch size for evaluation")
 @click.option("--sigma0", type=float, default=1 / 6, help="Initial sigma for CMA-ES")
@@ -132,6 +138,7 @@ def main(
     merge_cuda: bool,
     trust_remote_code: bool,
     allow_crimes: bool,
+    infer_architecture: bool,
     random_seed: int,
     batch_size: Optional[int],
     sigma0: float,
