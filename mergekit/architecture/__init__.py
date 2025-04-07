@@ -63,7 +63,9 @@ def get_architecture_info(
         arch_info_for_config(m.config(trust_remote_code=options.trust_remote_code))
         for m in models
     ]
-    if all(arch is not None for arch in model_arch_info):
+    if not options.infer_architecture and all(
+        arch is not None for arch in model_arch_info
+    ):
         if not options.allow_crimes and any(
             arch != model_arch_info[0] for arch in model_arch_info
         ):

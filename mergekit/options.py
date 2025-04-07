@@ -36,6 +36,7 @@ class MergeOptions(BaseModel, frozen=True):
     multi_gpu: bool = False
     num_threads: Optional[int] = None
     gpu_rich: bool = False
+    infer_architecture: bool = False
 
     def apply_global_options(self):
         logging.basicConfig(level=logging.INFO if self.verbose else logging.WARNING)
