@@ -77,6 +77,7 @@ OPTION_HELP = {
     "num_threads": "Number of threads to use for parallel CPU operations",
     "verbose": "Enable verbose logging",
     "gpu_rich": "Alias for --cuda --low-cpu-memory --read-to-gpu --multi-gpu",
+    "infer_architecture": "Infer architecture for all models, rather than using preset architectures",
 }
 
 OPTION_CATEGORIES = {
@@ -100,6 +101,7 @@ OPTION_CATEGORIES = {
     "verbose": "Miscellaneous",
     "quiet": "Miscellaneous",
     "lora_merge_dtype": "Miscellaneous",
+    "infer_architecture": "Miscellaneous",
 }
 
 
